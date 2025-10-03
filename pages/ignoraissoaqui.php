@@ -14,17 +14,11 @@
  
 //      - criação da página php sem functions mas funcional
  
-
 // $valor = filter_input(INPUT_GET,"valor", FILTER_VALIDATE_FLOAT);
 $valor = trim($_GET['valor']);
 // $moeda = filter_input(INPUT_GET,"moeda", FILTER_SANITIZE_STRING);
 $moeda = trim($_GET['moeda']);
 $resultado = "";
-
-// $USD = 5.34;
-// $EUR = 6.27;
-// $ARS = 0.0037;
-
 
 // $taxas = [
 //     "Dólar" => 5.34,
@@ -44,8 +38,6 @@ if($moeda === "Dólar"){
     $resultado = $valor * "ARS";
     echo " o valor convertido é : " . $resultado;
 }
-
-
 
 echo "R$ " . number_format($valor, 2, ',', '.') . 
      " = " . number_format($resultado, 2, ',', '.') . " $moeda";

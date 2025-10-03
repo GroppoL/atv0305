@@ -1,4 +1,10 @@
 <?php 
+// criação da função que valida entradas
+function validarEntrada($valor){
+    if (!is_numeric($valor)) {
+        return false;
+}
+}
 
 $valor = trim($_GET['valor']);
 $moeda = trim($_GET['moeda']);
