@@ -24,12 +24,17 @@ function valorEuro($brl, $taxaEuro){
     $euro = $brl / $taxaEuro;
     return round($euro,2);
 }
+function valorPesoArgentino($brl, $taxaPesoArgentino){
+    $pesoArgentino = $brl / $taxaPesoArgentino;
+    return round($pesoArgentino,2);
+}
 
 $valor = trim($_GET['valor']);
 $moeda = trim($_GET['moeda']);
 
 $valorConvertido = valorDolar($brl, $taxaDolar);
 $valorConvertido = valorEuro($brl, $taxaEuro);
+$valorConvertido = valorPesoArgentino($brl, $taxaPesoArgentino);
 validarEntrada($valor);
 
 if ($moeda === "USD") {
@@ -37,7 +42,7 @@ if ($moeda === "USD") {
 } else if ($moeda === "EUR") {
     $cotacao = 0;
 } else if ($moeda === "ARS") {
-    $cotacao = 0.0037;
+    $cotacao = 0;
 } else {
     $cotacao = null;
 }
