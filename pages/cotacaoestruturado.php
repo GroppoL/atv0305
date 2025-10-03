@@ -3,12 +3,14 @@
 function validarEntrada($valor){
     if (!is_numeric($valor)) {
         return false;
+    }
 }
-}
+
 
 $valor = trim($_GET['valor']);
 $moeda = trim($_GET['moeda']);
 
+validarEntrada($valor);
 
 if ($moeda === "USD") {
     $cotacao = 5.34;
