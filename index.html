@@ -8,12 +8,13 @@
 </head>
 <body>
     <h1 id="cadt-text">Conversão de Moedas</h1>
-    <form method="get" action="./pages/atv0305.php" id="forms">
+    <form method="get" action="./pages/cotacao.php" id="forms">
         <form method="post">
             Valor em R$: <input type="number" step="0.01" name="valor" required>
             <select name="moeda">
                 <option value="USD">Dólar</option>
                 <option value="EUR">Euro</option>
+                <option value="ARS">Peso Argentino</option>
             </select>
             <button type="submit">Converter</button>
         </form>
