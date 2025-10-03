@@ -8,21 +8,34 @@ function validarEntrada($valor){
 }
 
 // criação da função que exibe a mensagem
+function exibirMensagem(){
+
+}
+
+
+// criação da função que converte para dólar
 function valorDolar($brl, $taxaDolar){
     $dolar = $brl / $taxaDolar;
     return round($dolar,2);
+}
+
+// criação da função que converte para euro
+function valorEuro($brl, $taxaEuro){
+    $euro = $brl / $taxaEuro;
+    return round($euro,2);
 }
 
 $valor = trim($_GET['valor']);
 $moeda = trim($_GET['moeda']);
 
 $valorConvertido = valorDolar($brl, $taxaDolar);
+$valorConvertido = valorEuro($brl, $taxaEuro);
 validarEntrada($valor);
 
 if ($moeda === "USD") {
     $cotacao = 0;
 } else if ($moeda === "EUR") {
-    $cotacao = 6.27;
+    $cotacao = 0;
 } else if ($moeda === "ARS") {
     $cotacao = 0.0037;
 } else {
