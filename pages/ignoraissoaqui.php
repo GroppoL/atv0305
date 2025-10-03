@@ -1,4 +1,6 @@
 <?php
+// Caso alguém olhe isso aqui, saiba que essa é a minha página de apoio, por isso está mesmo uma bagunça, obrigada.
+
 
 // Criar um algoritmo em php que permita três tipos de conversão:
 // - Conversão de Real para Dólar

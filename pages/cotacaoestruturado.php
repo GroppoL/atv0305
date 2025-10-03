@@ -1,19 +1,26 @@
 <?php 
+
 // criação da função que valida entradas
 function validarEntrada($valor){
-    if (!is_numeric($valor)) {
+    if (filter_var(!is_numeric($valor)) ){
         return false;
     }
 }
 
+// criação da função que exibe a mensagem
+function valorDolar($brl, $taxaDolar){
+    $dolar = $brl / $taxaDolar;
+    return round($dolar,2);
+}
 
 $valor = trim($_GET['valor']);
 $moeda = trim($_GET['moeda']);
 
+$valorConvertido = valorDolar($brl, $taxaDolar);
 validarEntrada($valor);
 
 if ($moeda === "USD") {
-    $cotacao = 5.34;
+    $cotacao = 0;
 } else if ($moeda === "EUR") {
     $cotacao = 6.27;
 } else if ($moeda === "ARS") {
